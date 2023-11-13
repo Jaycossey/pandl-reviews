@@ -1,0 +1,37 @@
+/* GLOBALS ---------------------------------------------------------------*/
+:root {
+    --card-bg-1: rgba(255, 239, 216, 0.5);
+}
+
+body {
+    font-family: verdana;
+    background-color: #adadad;
+}
+/* CLASSES ---------------------------------------------------------------*/
+/* NAVBAR STYLES ---------------------------------------------------------*/
+nav {
+    position: fixed;
+    z-index: 10;
+}
+/* LANDING STYLES --------------------------------------------------------*/
+#about {
+    background-image: url("../images/pandl-color-rect.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    text-shadow: 0 2px 10px white;
+    font-size: 1.2rem;
+}
+
+.jumbotron {
+    background-color: var(--card-bg-1);
+    margin-top: 60px;
+}
+
+#reviews {
+    height: 400px;
+}
+/* REVIEW CARD STYLES ----------------------------------------------------*/
+/* STAFF CARD STYLES -----------------------------------------------------*/
+/* CONTACT CARD STYLES ---------------------------------------------------*/
