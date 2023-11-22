@@ -1,13 +1,34 @@
 // GLOBALS ----------------------------------------------------------------
 const albumReviewContainer = document.getElementById('accordionAlbum');
 
+// Band name storage - handles searches and fetch
+let bandName = "lune";
+let currentReview;
+
 // FUNCTIONS TO CREATE NEW ACCORDIAN ELEMENT ------------------------------
 
 // Fetch request for each review
-function fetchReviews() {
+async function fetchReviews() {
     // Get data 
-}
+    let customPath = "./assets/text-files/" + bandName + ".txt";
+    // await fetch(customPath, {mode: 'no-cors'})
+    //     .then(function (response) {
+    //         return response.text();
+    //     })
+    //     .then(function (text) {
+    //         console.log("response: ", text);
+    //         currentReview = text;
+    //         console.log(currentReview);
+    //     })
+    //     .catch(function (error) {
+    //         console.log(error);
+    //     })
 
+    const response = await fetch(customPath, {mode: 'no-cors'});
+    const text = await response.text();
+    console.log("response text: ", text);
+}
+fetchReviews();
 // Create element for the dropdown
 function createAccordEl() {
     /**
