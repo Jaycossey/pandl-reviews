@@ -29,9 +29,10 @@ nav {
     margin-top: 60px;
 }
 
-#reviews {
-    height: 400px;
-}
 /* REVIEW CARD STYLES ----------------------------------------------------*/
+#reviews {
+    height: auto;
+}
+
 /* STAFF CARD STYLES -----------------------------------------------------*/
 /* CONTACT CARD STYLES ---------------------------------------------------*/
