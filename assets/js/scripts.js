@@ -8,30 +8,51 @@ let currentReview;
 // FUNCTIONS TO CREATE NEW ACCORDIAN ELEMENT ------------------------------
 
 // Fetch request for each review
-function fetchReviews() {
-    // Get data 
-    let customPath = `assets/text-files/${bandName + ".txt"}`;
-    // let customPath = 'lune.txt';
+// function fetchReviews() {
+//     // Get data 
+//     let customPath = `./assets/text-files/${bandName}.txt`;
+//     // let customPath = 'lune.txt';
 
-    const myRequest = new Request(customPath);
-    fetch(myRequest, {
-        headers: {
-            'Content-Type': 'text/plain'
-        },
-        mode: 'no-cors',
-        method: 'GET'
-    })
+//     const myRequest = new Request(customPath);
+//     fetch(myRequest, {
+//         headers: {
+//             'Content-Type': 'text/plain',
+//         },
+//         mode: 'no-cors',
+//         method: 'GET',
+//     })
+//         .then((response) => {
+//             console.log(response)
+//             // if (!response.ok) {
+//             //     throw new Error(`Error, status = ${response.status}`);
+//             // }
+//             console.log(response.text());
+//             return response.text();
+//         })
+//         .then((text) => {
+//             console.log(text);
+//             currentReview = text.body;
+//             console.log("current review var: ", currentReview);
+//         })
+//         .catch(error => {
+//             console.error('error fetching file: ', error);
+//         });
+// }
+
+// fetchReviews();
+
+// THIS IS THE FIX!!! needs to be run in the live server to show the log properly (extension wasnt working, or I had the wrong one)
+// credit for fix => @juhuyoon - github
+const fetchReviews = async () => {
+    let path = `./assets/text-files/${bandName}.txt`;
+    console.log(path);
+    fetch(path, {mode: 'no-cors'})
         .then((response) => {
-            console.log(response)
-            if (!response.ok) {
-                throw new Error(`Error, status = ${response.status}`);
-            }
-            console.log(response.text());
             return response.text();
         })
-        .then((text) => {
-            console.log(text);
-        });
+        .then((data) => {
+            console.log(data);
+        })
 }
 
 fetchReviews();
