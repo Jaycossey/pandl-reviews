@@ -59,13 +59,14 @@
                     <p class="lead">Check out the bands we review here!</p>
                     <hr class="my-4">
                     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3IOulYiw5CsXTJRwgDftqI?utm_source=generator" width="50%" height="50%" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <!-- Description -->
+                    <div id="description">
+                        <p>P&L Tunes is a UK based alternative music website. We showcase live reviews and music releases from artists all over the world that come to perform in the UK.</p>
+                    </div>
                 </div>
+
             </div>
-            <!-- Description -->
-            <div id="description">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam modi officia, libero tempora quae velit. Voluptatum suscipit provident maiores laudantium repellendus corrupti nisi, mollitia, explicabo impedit ipsa laboriosam cupiditate a!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam modi officia, libero tempora quae velit. Voluptatum suscipit provident maiores laudantium repellendus corrupti nisi, mollitia, explicabo impedit ipsa laboriosam cupiditate a!</p>
-            </div>
+
         </section>
             
         <!-- Review Section Start -->
@@ -75,9 +76,9 @@
                 <div class="card">
                     <div class="card-header" id="headingOne">
                         <h5 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <div class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             Live Reviews
-                        </button>
+                        </div>
                         </h5>
                     </div>
                 
@@ -91,12 +92,12 @@
                 </div>
 
                 <!-- Album Reviews -->
-                <div class="card">
+                <div class="card" id="albumReviews">
                     <div class="card-header" id="headingTwo">
                         <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <div class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                             Album Reviews
-                        </button>
+                        </div>
                         </h5>
                     </div>
 
@@ -105,7 +106,7 @@
                             <ul>
                                 <button class="reviewButton">Lune</button>
                                 <button class="reviewButton">Broadside</button>
-                                <button class="reviewButton">Ilmariinen</button>
+                                <button class="reviewButton">Ilmarinen</button>
                             </ul>
                         </div>
                     </div>
@@ -114,18 +115,53 @@
 
             <!-- Review Display Container -->
             <div id="reviewDisplay">
-                <h2>Band Name Here</h2>
-                <img id="albumArt" src="" />
+                <h2 id="bandNameDisplay"></h2>
+                <div id="albumArtContainer"></div>
                 <p id="reviewText"></p>
             </div>
 
         </section>
 
         <!-- Staff Section Start -->
-        <section id="staff"></section>
+        <section id="staff">
+            
+        </section>
 
         <!-- Contact Section Start -->
-        <section id="contactUs"></section>
+        <section id="contactUs">
+            <form>
+                <h3>Contact Us for a Review</h3>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Email address</label>
+                    <input type="email" class="form-control" id="formInputEmail" placeholder="name@example.com">
+                    <label for="bandNameInput">Artist Name</label>
+                    <input type="text" class="form-control" id="bandNameInput" placeholder="Artist Name">
+                    <label for="bandNameInput">Location</label>
+                    <input type="text" class="form-control" id="bandNameInput" placeholder="Location">
+                </div>
+                <div class="form-group">
+                    <label for="formInputEmail">Released or Unreleased</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>Released</option>
+                        <option>Unreleased</option>
+                    </select>
+                    <label for="formInputGenre">Genre</label>
+                    <select class="form-control" id="exampleFormGenre">
+                        <option>Select</option>
+                        <option>Metal</option>
+                        <option>Power Metal</option>
+                        <option>Deathcore</option>
+                        <option>Metalcore</option>
+                        <option>Ska</option>
+                        <option>Punk</option>
+                        <option>Pop Punk</option>
+                        <option>Other</option>
+                    </select>
+                    <label for="musicLinkInput">Music Link</label>
+                    <input type="url" class="form-control" id="musicLink" placeholder="eg: www.exampleLink.co.uk">
+                </div>
+            </form>
+        </section>
 
     </main>
         
