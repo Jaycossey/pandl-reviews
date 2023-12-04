@@ -70,9 +70,54 @@
             
         <!-- Review Section Start -->
         <section id="reviews">
-            <!-- Album Reviews -->
-            <div id="accordionAlbum" class="accordion"></div>
-            <!-- Live Reviews -->
+            <!-- Live Review Links -->
+            <div class="accordion" id="reviewAccordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Live Reviews
+                        </button>
+                        </h5>
+                    </div>
+                
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <ul>
+                                <button>Example Live Review</button>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Album Reviews -->
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Album Reviews
+                        </button>
+                        </h5>
+                    </div>
+
+                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <ul>
+                                <button class="reviewButton">Lune</button>
+                                <button class="reviewButton">Broadside</button>
+                                <button class="reviewButton">Ilmariinen</button>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+
+            <!-- Review Display Container -->
+            <div id="reviewDisplay">
+                <h2>Band Name Here</h2>
+                <img id="albumArt" src="" />
+                <p id="reviewText"></p>
+            </div>
 
         </section>
 
