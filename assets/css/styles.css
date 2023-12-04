@@ -55,16 +55,23 @@ nav {
 
 /* STAFF CARD STYLES -----------------------------------------------------*/
 #staff {
-    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
     background-color: white;
+}
+
+.staffContainer {
+    height: auto;
     text-align: center;
     padding: 20px;
 }
 
-#staffExample > img {
+.staffContainer > img {
     width: 150px;
     height: 150px;
-    border: 4px outset gold;
+    border: 6px outset gold;
     border-radius: 51%;
 }
 
