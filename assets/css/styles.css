@@ -7,12 +7,13 @@ body {
     font-family: verdana;
     background-color: #adadad;
 }
-/* CLASSES ---------------------------------------------------------------*/
+
 /* NAVBAR STYLES ---------------------------------------------------------*/
 nav {
     position: fixed;
     z-index: 10;
 }
+
 /* LANDING STYLES --------------------------------------------------------*/
 #about {
     background-image: url("../images/pandl-color-rect.jpg");
@@ -55,13 +56,28 @@ nav {
 /* STAFF CARD STYLES -----------------------------------------------------*/
 #staff {
     height: auto;
-    background-color: #FFF8E7;
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+#staffExample > img {
+    width: 150px;
+    height: 150px;
+    border: 4px outset gold;
+    border-radius: 51%;
 }
 
 /* CONTACT CARD STYLES ---------------------------------------------------*/
 form {
     background-color: black;
     padding: 10px;
+    text-align: left;
+    padding-top: 20px;
+}
+
+form > h3 {
+    text-align: center;
 }
 
 /* Media Queries -------------------------------------------------------- */
