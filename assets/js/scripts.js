@@ -3,7 +3,7 @@ const reviewTextContainer = document.getElementById('reviewText');
 const accordionElement = document.getElementById('reviewAccordion');
 const bandTitle = document.getElementById('bandNameDisplay');
 const albumArtContainer = document.getElementById('albumArtContainer');
-const emailSubmitButton = document.getElementById('contactFormButton');
+const formElement = document.getElementById('emailForm');
 
 // Band data storage - handles searches and fetch
 let bandName = "lune";
@@ -58,6 +58,37 @@ accordionElement.addEventListener('click', function(event) {
 
 // SUBMIT FORM BUTTON HANDLE ----------------------------------------------
 
-emailSubmitButton.addEventListener('submit', event => {
+emailForm.addEventListener('submit', event => {
+    event.preventDefault();
     console.log(event);
+
+    // target all form elements
+    let email = document.getElementById('formInputEmail');
+    let artist = document.getElementById('bandNameInput');
+    let location = document.getElementById('locationInput');
+    let releasedStatus = document.getElementById('formReleasedInput');
+    let genre = document.getElementById('formInputGenre');
+    let musicLink = document.getElementById('musicLinkInput');
+
+    // if any input is empty or invalid
+    // then prompt with highlighting to fill that element
+    // else submit form and send email via separate function -- need to research how this would work
 })
+
+/**
+ * Planning for form element: 
+ * I need to handle submission of all elements within the form, 
+ * The elements are:
+ * - email
+ * - artist name
+ * - location
+ * - released status
+ * - genre
+ * - music link
+ * 
+ * Each of these elements need a valid input to register a submission
+ * 
+ * once all inputs are valid then I need to send the data to: pandltunes@gmail.com
+ * 
+ * I need to store the data in an object called ""
+ */
