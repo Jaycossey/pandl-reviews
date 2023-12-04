@@ -1,21 +1,17 @@
 # P and L Tunes
 
-This project is being created for a Music Review company. The client has requested multiple components on a static webpage, containing a landing page, bio, a category dropdown (sort through reviews) containing live, album, and genre sorts, an embedded spotify playlist, and a contact form for review requests. Client has requested a mobile responsive design.
+This project was created for P&L Reviews, an alternative music review company based in the UK. The client requested a website to display their reviews, with functionality to allow sorting through the reviews and handling that data for users to browse and learn about artist releases and upcoming music. 
+
+The site contains a navbar with local anchors to different sections of the page, a short bio, a review accordion to filter and select the reviews for each artist, as well as a staff section and contact form for artists to request reviews. 
 
 ## Roadmap
 
-- Create Landing page
-- Import Logo
-- Determine color scheme
-- Create sections for each component
-- Create embedded (sticky) spotify component
-- Create Navbar, dropdown element to allow sorting by
-- Genre
-- Album
-- Live
-- Create section to change reviews displayed dependent on parameters
-- Create Contact form
-- Create "Staff" component. - To be completed at a later date
+- Form Functionality
+- Staff section 
+- Navbar link and form fix
+- Styling changes
+- Accordion fix
+- Accordion link fix
 
 ## Front End
 
@@ -34,4 +30,4 @@ For support, please contact the dev team via: https://github.com/Jaycossey
 
 ## License
 
-See license for details
+MIT - See license for details
