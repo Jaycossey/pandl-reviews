@@ -33,15 +33,26 @@ nav {
 /* REVIEW CARD STYLES ----------------------------------------------------*/
 #reviews {
     height: auto;
+    background-color: black;
 }
 
 #reviewAccordion > div > ul {
     display: flex;
+    align-content: space-around;
+    justify-content: space-around;
+}
+
+.reviewButton {
+    width: 200px;
+    border-radius: 5px;
+    border: 3px outset gold;
+    background-color: #FFF8E7;
+    margin: auto;
 }
 
 #reviewDisplay {
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     background-color: #FFF8E7;
 }
 
@@ -56,6 +67,7 @@ nav {
 /* STAFF CARD STYLES -----------------------------------------------------*/
 #staff {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     width: 100vw;
@@ -77,15 +89,21 @@ nav {
 
 /* CONTACT CARD STYLES ---------------------------------------------------*/
 form {
-    background-color: black;
+    background-color: #FFF8E7;
     padding: 10px;
     text-align: left;
     padding-top: 20px;
 }
 
 form > h3 {
+    padding-top: 10px;
     text-align: center;
 }
+
+form > * {
+    padding: 10px;
+}
+
 
 /* Media Queries -------------------------------------------------------- */
 
