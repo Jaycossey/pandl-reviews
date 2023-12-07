@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>P & L Tunes</title>
     <link rel="icon" href="./assets/images/pandl-white.PNG">
+
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -25,26 +26,22 @@
                 <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Our Staff</a>
+                <a class="nav-link" href="#staff">Our Staff</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Reviews
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Live</a>
+                    <a class="dropdown-item" href="#liveReviewAccordion">Live</a>
                         <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Album</a>
+                    <a class="dropdown-item" href="#albumReviewAccordion">Album</a>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="#contactUs">Contact Us</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search Reviews" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
         </div>
     </nav>
 
@@ -74,34 +71,34 @@
             <!-- Live Review Links -->
             <div class="accordion" id="reviewAccordion">
                 <div class="card">
-                    <div class="card-header" id="headingOne">
+                    <div class="card-header" id="liveReviewAccordion">
                         <h5 class="mb-0">
-                        <div class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                             Live Reviews
-                        </div>
+                        </button>
                         </h5>
                     </div>
                 
-                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#liveReviewAccordion">
                         <div class="card-body">
                             <ul>
-                                <button>Example Live Review</button>
+                                <button class="reviewButton">Expetya</button>
                             </ul>
                         </div>
                     </div>
                 </div>
 
                 <!-- Album Reviews -->
-                <div class="card" id="albumReviews">
+                <div class="card" id="albumReviewAccordion">
                     <div class="card-header" id="headingTwo">
                         <h5 class="mb-0">
-                        <div class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                             Album Reviews
-                        </div>
+                        </button>
                         </h5>
                     </div>
 
-                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#albumReviewAccordion">
                         <div class="card-body">
                             <ul>
                                 <button class="reviewButton">Lune</button>
@@ -134,28 +131,31 @@
                 <p>Sam</p>
                 <p>Reviewer</p>
             </div>
+            <div class="staffContainer">
+                <img class="staffProfile" src="./assets/images/kris.png" />
+                <p>Kris</p>
+                <p>Reviewer</p>
+            </div>
         </section>
 
         <!-- Contact Section Start -->
         <section id="contactUs">
-            <form>
+            <form id="emailForm" action="https://formsubmit.co/pandltunes@gmail.com" method="POST">
                 <h3>Contact Us for a Review</h3>
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Email address</label>
-                    <input type="email" class="form-control" id="formInputEmail" placeholder="name@example.com">
+                    <label for="formInputEmail">Email address</label>
+                    <input type="email" name="email" class="form-control" id="formInputEmail" placeholder="name@example.com" required>
                     <label for="bandNameInput">Artist Name</label>
-                    <input type="text" class="form-control" id="bandNameInput" placeholder="Artist Name">
-                    <label for="bandNameInput">Location</label>
-                    <input type="text" class="form-control" id="bandNameInput" placeholder="Location">
-                </div>
-                <div class="form-group">
-                    <label for="formInputEmail">Released or Unreleased</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <input type="text" name="bandName" class="form-control" id="bandNameInput" placeholder="Artist Name" required>
+                    <label for="locationInput">Location</label>
+                    <input type="text" name="location" class="form-control" id="locationInput" placeholder="Location" required>
+                    <label for="formReleasedInput">Released or Unreleased</label>
+                    <select class="form-control" type="select" name="releaseStatus" id="formReleasedInput" required>
                         <option>Released</option>
                         <option>Unreleased</option>
                     </select>
                     <label for="formInputGenre">Genre</label>
-                    <select class="form-control" id="exampleFormGenre">
+                    <select class="form-control" type="select" name="genre" id="formInputGenre" required>
                         <option>Select</option>
                         <option>Metal</option>
                         <option>Power Metal</option>
@@ -167,8 +167,11 @@
                         <option>Other</option>
                     </select>
                     <label for="musicLinkInput">Music Link</label>
-                    <input type="url" class="form-control" id="musicLink" placeholder="eg: www.exampleLink.co.uk">
+                    <input type="url" name="link" class="form-control" id="musicLink" placeholder="eg: www.exampleLink.co.uk" required>
                 </div>
+
+                <!-- Submit Email Form Button -->
+                <button type="submit" id="contactFormButton" class="btn badge-dark">Send Message</button>
             </form>
         </section>
 
