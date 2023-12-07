@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>P & L Tunes</title>
     <link rel="icon" href="./assets/images/pandl-white.PNG">
+
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -130,26 +131,31 @@
                 <p>Sam</p>
                 <p>Reviewer</p>
             </div>
+            <div class="staffContainer">
+                <img class="staffProfile" src="./assets/images/kris.png" />
+                <p>Kris</p>
+                <p>Reviewer</p>
+            </div>
         </section>
 
         <!-- Contact Section Start -->
         <section id="contactUs">
-            <form id="emailForm">
+            <form id="emailForm" action="https://formsubmit.co/pandltunes@gmail.com" method="POST">
                 <h3>Contact Us for a Review</h3>
                 <div class="form-group">
                     <label for="formInputEmail">Email address</label>
-                    <input type="email" class="form-control" id="formInputEmail" placeholder="name@example.com">
+                    <input type="email" name="email" class="form-control" id="formInputEmail" placeholder="name@example.com" required>
                     <label for="bandNameInput">Artist Name</label>
-                    <input type="text" class="form-control" id="bandNameInput" placeholder="Artist Name">
+                    <input type="text" name="bandName" class="form-control" id="bandNameInput" placeholder="Artist Name" required>
                     <label for="locationInput">Location</label>
-                    <input type="text" class="form-control" id="locationInput" placeholder="Location">
+                    <input type="text" name="location" class="form-control" id="locationInput" placeholder="Location" required>
                     <label for="formReleasedInput">Released or Unreleased</label>
-                    <select class="form-control" id="formReleasedInput">
+                    <select class="form-control" type="select" name="releaseStatus" id="formReleasedInput" required>
                         <option>Released</option>
                         <option>Unreleased</option>
                     </select>
                     <label for="formInputGenre">Genre</label>
-                    <select class="form-control" id="formInputGenre">
+                    <select class="form-control" type="select" name="genre" id="formInputGenre" required>
                         <option>Select</option>
                         <option>Metal</option>
                         <option>Power Metal</option>
@@ -161,7 +167,7 @@
                         <option>Other</option>
                     </select>
                     <label for="musicLinkInput">Music Link</label>
-                    <input type="url" class="form-control" id="musicLink" placeholder="eg: www.exampleLink.co.uk">
+                    <input type="url" name="link" class="form-control" id="musicLink" placeholder="eg: www.exampleLink.co.uk" required>
                 </div>
 
                 <!-- Submit Email Form Button -->
