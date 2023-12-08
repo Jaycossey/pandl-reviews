@@ -1,115 +1,213 @@
-/* GLOBALS ---------------------------------------------------------------*/
+/* GLOBALS --------------------------------------------------------- */
 :root {
-    --card-bg-1: rgba(255, 239, 216, 0.5);
+    --logo-orange: #8D2603;
+    --logo-blue: #242A5A;
+    --logo-pink-light: #ECBAF7;
+    --logo-pink-dark: #B16AC8;
+    --gradient-1: linear-gradient(90deg, var(--logo-pink-dark), var(--logo-blue) 20%);
+    --gradient-2: linear-gradient(90deg, var(--logo-blue) 5%, var(--logo-pink-dark),  var(--logo-blue) 95%);
+    --gradient-3: linear-gradient(90deg, var(--logo-orange) 5%, var(--logo-pink-dark),  var(--logo-blue) 95%);
+    --gradient-4: linear-gradient(90deg, var(--logo-blue) 15%, var(--logo-pink-dark),  var(--logo-blue) 85%);
+    --radial-1: radial-gradient(circle at center, var(--logo-pink-dark) 10%, transparent 50%);
 }
 
 body {
-    font-family: verdana;
-    background-color: #adadad;
+    width: 100vw;
 }
 
-/* NAVBAR STYLES ---------------------------------------------------------*/
+body,
+a,
+.btn-link,
+.card-body > ul > button,
+form > button {
+    color: var(--logo-pink-light);
+    text-shadow: 0 0 5px var(--logo-pink-dark);
+}
+
+
+/* NAVBAR STYLES --------------------------------------------------- */
 nav {
     position: fixed;
-    z-index: 10;
+    width: 100vw;
+    height: 70px;
+    background-color: var(--logo-blue);
+    border-bottom: 4px solid var(--logo-pink-light);
 }
 
-/* LANDING STYLES --------------------------------------------------------*/
-#about {
-    background-image: url("../images/pandl-color-rect.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+.navbar-toggler {
+    background-image: var(--gradient-1);
+    filter: drop-shadow(0 0 3px var(--logo-pink-dark));
+}
+
+.navbar-toggler-icon {
+    background-image: url('../images/pandl-white.PNG');
     background-position: center;
+    background-size: cover;
+}
+
+.navbar-collapse {
+    border: 4px solid var(--logo-pink-dark);
+    background-image: var(--gradient-2);
+    margin-top: 10px;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+}
+
+ul > li {
+    background-color: var(--logo-blue);
+    margin-bottom: 2px;
+    padding-left: 20px;
+    padding: 10px;
+}
+
+
+/* LANDING STYLES -------------------------------------------------- */
+#about {
+    background-position: center;
+    background-size: cover;
+    text-shadow: 0 0 5px var(--logo-blue);
+}
+
+
+.jumbotron {
+    background: var(--radial-1);
     text-align: center;
-    text-shadow: 0 2px 10px white;
     font-size: 1.2rem;
 }
 
-.jumbotron {
-    background-color: var(--card-bg-1);
-    margin-top: 60px;
+iframe {
+    width: 90%;
+    height: 300px;
 }
 
-/* REVIEW CARD STYLES ----------------------------------------------------*/
-#reviews {
-    height: auto;
-    background-color: black;
+
+/* REVIEW STYLE S--------------------------------------------------- */
+
+/* Accordion styles */
+.card {
+    background: var(--gradient-1);
 }
 
-#reviewAccordion > div > ul {
+.grad-3-bg {
+    background: var(--gradient-3);
+}
+
+.card-header {
+    border: 2px solid var(--logo-pink-light);
+}
+
+.card-body > ul {
     display: flex;
-    align-content: space-around;
-    justify-content: space-around;
+    flex-direction: column;
 }
 
-.reviewButton {
-    width: 200px;
-    border-radius: 5px;
-    border: 3px outset gold;
-    background-color: #FFF8E7;
+form > button,
+.card-body > ul > button {
+    width: 50%;
+    height: 50px;
     margin: auto;
+    margin-top: 5px;
+    border: 4px solid var(--logo-pink-light);
+    filter: drop-shadow(0 0 5px var(--logo-pink-light));
+    border-radius: 10px;
+    background: var(--gradient-1);
 }
 
+/* Display Styles */
 #reviewDisplay {
+    background: var(--gradient-1);
     text-align: center;
-    padding: 20px;
-    background-color: #FFF8E7;
+    padding: 10px;
+    text-shadow: var(--logo-orange);
 }
 
-#albumArt {
+#albumArtContainer > img {
     width: 300px;
     height: 300px;
-    margin: 10px;
-    border: 5px outset gold;
+    margin-bottom: 20px;
+    border: 5px outset var(--logo-orange);
     border-radius: 10px;
 }
 
-/* STAFF CARD STYLES -----------------------------------------------------*/
+
+/* STAFF STYLES ----------------------------------------------------- */
+
 #staff {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    background-color: white;
+    align-items: space-around;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: var(--logo-blue);
+    border-top: 4px solid var(--logo-orange);
+}
+
+#staff:first-child {
+    position: fixed;
 }
 
 .staffContainer {
-    height: auto;
+    margin: 50px;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 .staffContainer > img {
-    width: 150px;
-    height: 150px;
-    border: 6px outset gold;
-    border-radius: 51%;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px outset var(--logo-orange);
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 15px var(--logo-pink-light));
 }
 
-/* CONTACT CARD STYLES ---------------------------------------------------*/
-form {
-    background-color: #FFF8E7;
-    padding: 10px;
-    text-align: left;
-    padding-top: 20px;
+.staffContainer > p:nth-child(2) {
+    font-size: 1.5rem;
 }
 
-form > h3 {
-    padding-top: 10px;
+
+/* FORM STYLES ----------------------------------------------------- */
+
+#contactUs {
+    background-color: var(--logo-orange);
+    padding: 40px;
     text-align: center;
 }
 
-form > * {
-    padding: 10px;
+#contactUs > form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+}
+
+#contactUs > form > input,
+#contactUs > form > select {
+    height: 40px;
+    border: 4px inset var(--logo-pink-dark);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
 }
 
 
-/* Media Queries -------------------------------------------------------- */
 
-@media (min-width: 320px) and (max-width: 1000px) {
-    iframe {
-        width: 100%;
-        height: 200px;
+/* MEDIA QUERIES  -------------------------------------------------- */
+@media (min-width: 1000px) and (max-width: 1920px) {
+    ul >li {
+        background-color: transparent;
     }
+    .navbar-toggle-icon {
+        display: none;
+    }
+
+    .navbar-collapse {
+        border: none;
+        margin-top: 0;
+    }
+
+    .jumbotron {
+        padding: 0;
+    }
+
 }

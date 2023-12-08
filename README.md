@@ -4,15 +4,12 @@ This project was created for P&L Reviews, an alternative music review company ba
 
 The site contains a navbar with local anchors to different sections of the page, a short bio, a review accordion to filter and select the reviews for each artist, as well as a staff section and contact form for artists to request reviews. 
 
-## Roadmap
-
-- Form Functionality
-- Staff section 
-- Navbar link and form fix
-- Styling changes
-- Accordion fix
-- Accordion link fix
-
+![Screenshot of desktop landing page](./assets/images/screenshots/landing-screengrab.PNG)
+![Screenshot of mobile landing page](./assets/images/screenshots/mobile-landing-screengrab.PNG)
+![Screenshot of review section](./assets/images/screenshots/review-screengrab.PNG)
+![Screenshot of staff section](./assets/images/screenshots/staff-screengrab.PNG)
+![Screenshot of contact form](./assets/images/screenshots/contact-screengrab.PNG)
+![Screenshot of expanded navbar](./assets/images/screenshots/darkmode-expanded-nav.PNG)
 ## Front End
 
 - HTML
