@@ -15,7 +15,7 @@
 </head>
 <body>
     <!-- Navbar start -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -48,21 +48,19 @@
     <!-- Main Start -->
     <main>
         <!-- About / Bio Section Start -->
-        <section id="about" class="bg-secondary p-4">
+        <section id="about" class="bg-secondary p-4" style="background-image: url('./assets/images/pandl-color-rect.jpg')">
             <!-- Spotify Embed -->
-            <div id="playlist">
-                <div class="jumbotron">
-                    <img src="./assets/images/pandl-black.PNG" alt="P and L Tunes Logo" width="30%">
-                    <p class="lead">Check out the bands we review here!</p>
-                    <hr class="my-4">
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3IOulYiw5CsXTJRwgDftqI?utm_source=generator" width="50%" height="50%" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    <!-- Description -->
-                    <div id="description">
-                        <p>P&L Tunes is a UK based alternative music website. We showcase live reviews and music releases from artists all over the world that come to perform in the UK.</p>
-                    </div>
+            <div class="jumbotron">
+                <img src="./assets/images/pandl-black.PNG" alt="P and L Tunes Logo" width="30%">
+                <p class="lead">Check out the bands we review here!</p>
+                <hr class="my-4">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3IOulYiw5CsXTJRwgDftqI?utm_source=generator" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <!-- Description -->
+                <div id="description">
+                    <p>P&L Tunes is a UK based alternative music website. We showcase live reviews and music releases from artists all over the world that come to perform in the UK.</p>
                 </div>
-
             </div>
+
 
         </section>
             
@@ -79,7 +77,7 @@
                         </h5>
                     </div>
                 
-                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#liveReviewAccordion">
+                    <div id="collapseOne" class="collapse grad-3-bg" aria-labelledby="headingOne" data-parent="#liveReviewAccordion">
                         <div class="card-body">
                             <ul>
                                 <button class="reviewButton">Expetya</button>
@@ -98,7 +96,7 @@
                         </h5>
                     </div>
 
-                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#albumReviewAccordion">
+                    <div id="collapseTwo" class="collapse show grad-3-bg" aria-labelledby="headingTwo" data-parent="#albumReviewAccordion">
                         <div class="card-body">
                             <ul>
                                 <button class="reviewButton">Lune</button>
@@ -140,38 +138,34 @@
 
         <!-- Contact Section Start -->
         <section id="contactUs">
-            <form id="emailForm" action="https://formsubmit.co/pandltunes@gmail.com" method="POST">
-                <h3>Contact Us for a Review</h3>
-                <div class="form-group">
-                    <label for="formInputEmail">Email address</label>
-                    <input type="email" name="email" class="form-control" id="formInputEmail" placeholder="name@example.com" required>
-                    <label for="bandNameInput">Artist Name</label>
-                    <input type="text" name="bandName" class="form-control" id="bandNameInput" placeholder="Artist Name" required>
-                    <label for="locationInput">Location</label>
-                    <input type="text" name="location" class="form-control" id="locationInput" placeholder="Location" required>
-                    <label for="formReleasedInput">Released or Unreleased</label>
-                    <select class="form-control" type="select" name="releaseStatus" id="formReleasedInput" required>
-                        <option>Released</option>
-                        <option>Unreleased</option>
-                    </select>
-                    <label for="formInputGenre">Genre</label>
-                    <select class="form-control" type="select" name="genre" id="formInputGenre" required>
-                        <option>Select</option>
-                        <option>Metal</option>
-                        <option>Power Metal</option>
-                        <option>Deathcore</option>
-                        <option>Metalcore</option>
-                        <option>Ska</option>
-                        <option>Punk</option>
-                        <option>Pop Punk</option>
-                        <option>Other</option>
-                    </select>
-                    <label for="musicLinkInput">Music Link</label>
-                    <input type="url" name="link" class="form-control" id="musicLink" placeholder="eg: www.exampleLink.co.uk" required>
-                </div>
-
-                <!-- Submit Email Form Button -->
-                <button type="submit" id="contactFormButton" class="btn badge-dark">Send Message</button>
+            <h3>Contact us for a review!</h3>
+            <!-- Form Submit website, need to look at the docs to fix -->
+            <form action="https://formsubmit.co/jaycossey@live.com" method="POST">
+                <label for="name">Artist Name</label>
+                <input type="text" name="name" placeholder="Artist Name" required>
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="example@email.com" required>
+                <label for="genre">Genre</label>
+                <select type="select" name="genre" required>
+                    <option>-- Please Select --</option>
+                    <option>Metal</option>
+                    <option>Death Metal</option>
+                    <option>Ska</option>
+                    <option>Metalcore</option>
+                    <option>Deathcore</option>
+                    <option>Punk</option>
+                    <option>Pop Punk</option>
+                    <option>Other</option>
+                </select>
+                <label for="location">Location</label>
+                <input type="text" name="location" placeholder="eg: London" required>
+                <label for="releaseStatus">Release Status</label>
+                <select type="select" name="release" required>
+                    <option>-- Please Select --</option>
+                    <option>Released</option>
+                    <option>Unreleased</option>
+                </select>
+                <button type="submit">Send</button>
             </form>
         </section>
 
