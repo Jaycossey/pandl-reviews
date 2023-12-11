@@ -91,4 +91,8 @@ emailForm.addEventListener('submit', event => {
  * once all inputs are valid then I need to send the data to: pandltunes@gmail.com
  * 
  * I need to store the data in an object called ""
+ * 
+ * Serious note, could I switch to emailJS (realistically, could cost client 
+ * at some point down the line but would be better control over functionality 
+ * potentially )
  */
