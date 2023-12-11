@@ -166,7 +166,7 @@ form > button,
 /* FORM STYLES ----------------------------------------------------- */
 
 #contactUs {
-    background-color: var(--logo-orange);
+    background-color: black;
     padding: 40px;
     text-align: center;
 }
