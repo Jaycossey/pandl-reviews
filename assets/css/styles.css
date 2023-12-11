@@ -9,6 +9,7 @@
     --gradient-3: linear-gradient(90deg, var(--logo-orange) 5%, var(--logo-pink-dark),  var(--logo-blue) 95%);
     --gradient-4: linear-gradient(90deg, var(--logo-blue) 15%, var(--logo-pink-dark),  var(--logo-blue) 85%);
     --radial-1: radial-gradient(circle at center, var(--logo-pink-dark) 10%, transparent 50%);
+    --review-bg: linear-gradient(90deg, var(--logo-orange), var(--logo-blue) 10%, black 25%);
 }
 
 body {
@@ -89,7 +90,7 @@ iframe {
 }
 
 .grad-3-bg {
-    background: var(--gradient-3);
+    background: var(--gradient-2);
 }
 
 .card-header {
@@ -115,7 +116,7 @@ form > button,
 
 /* Display Styles */
 #reviewDisplay {
-    background: var(--gradient-1);
+    background-image: var(--review-bg);
     text-align: center;
     padding: 10px;
     text-shadow: var(--logo-orange);
@@ -142,10 +143,6 @@ form > button,
     border-top: 4px solid var(--logo-orange);
 }
 
-#staff:first-child {
-    position: fixed;
-}
-
 .staffContainer {
     margin: 50px;
     text-align: center;
@@ -169,7 +166,7 @@ form > button,
 /* FORM STYLES ----------------------------------------------------- */
 
 #contactUs {
-    background-color: var(--logo-orange);
+    background-color: black;
     padding: 40px;
     text-align: center;
 }
