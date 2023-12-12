@@ -47,7 +47,7 @@ accordionElement.addEventListener('click', function(event) {
         // update album art element
         albumArt.id = "albumArt";
         albumArt.alt = bandName + " album art";
-        albumArt.src = './assets/images/' + bandName.toLowerCase() + '.PNG';
+        albumArt.src = './assets/images/' + bandName.toLowerCase() + '.png';
         // fetch text data of reviews
         fetchReviews();
         // console.log(bandName);
