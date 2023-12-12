@@ -21,7 +21,7 @@ The site contains a navbar with local anchors to different sections of the page,
 
 ## Usage
 
-N/A - Project is still in development
+Visit the demo site at: https://jaycossey.github.io/pandl-reviews/
 
 ## Support
 
