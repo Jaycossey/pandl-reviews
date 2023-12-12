@@ -20,7 +20,7 @@ let albumArt = document.createElement('img');
 // Arrow function to handle async fetch
 const fetchReviews = async () => {
     // custom path for each file
-    let path = `./assets/text-files/${bandName}.txt`;
+    let path = `./assets/text-files/${bandName.toLowerCase()}.txt`;
     // fetch data 
     fetch(path, {mode: 'no-cors'})
         .then((response) => {
@@ -47,7 +47,7 @@ accordionElement.addEventListener('click', function(event) {
         // update album art element
         albumArt.id = "albumArt";
         albumArt.alt = bandName + " album art";
-        albumArt.src = './assets/images/' + bandName + '.PNG';
+        albumArt.src = './assets/images/' + bandName.toLowerCase() + '.PNG';
         // fetch text data of reviews
         fetchReviews();
         // console.log(bandName);
@@ -55,44 +55,3 @@ accordionElement.addEventListener('click', function(event) {
     }
 })
 
-
-// SUBMIT FORM BUTTON HANDLE ----------------------------------------------
-
-emailForm.addEventListener('submit', event => {
-    event.preventDefault();
-    console.log(event);
-
-    // target all form elements
-    let email = document.getElementById('formInputEmail');
-    let artist = document.getElementById('bandNameInput');
-    let location = document.getElementById('locationInput');
-    let releasedStatus = document.getElementById('formReleasedInput');
-    let genre = document.getElementById('formInputGenre');
-    let musicLink = document.getElementById('musicLinkInput');
-
-    // if any input is empty or invalid
-    // then prompt with highlighting to fill that element
-    // else submit form and send email via separate function -- need to research how this would work
-})
-
-/**
- * Planning for form element: 
- * I need to handle submission of all elements within the form, 
- * The elements are:
- * - email
- * - artist name
- * - location
- * - released status
- * - genre
- * - music link
- * 
- * Each of these elements need a valid input to register a submission
- * 
- * once all inputs are valid then I need to send the data to: pandltunes@gmail.com
- * 
- * I need to store the data in an object called ""
- * 
- * Serious note, could I switch to emailJS (realistically, could cost client 
- * at some point down the line but would be better control over functionality 
- * potentially )
- */
